@@ -162,7 +162,7 @@ sudo firewall-cmd --reload
 现在，您的Project Zomboid服务器应该可以成功运行了。玩家可以通过一下步骤连接到服务器
 
 1.启动Porject Zomboid游戏。
-
+![游戏服务器页面](pic/server.jpg)
 
 
 2.选择“加入服务器”。
