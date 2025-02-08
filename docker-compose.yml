@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  ProjectZomboidDedicatedServer:
+    container_name: pz
+    image: danixu86/project-zomboid-dedicated-server:latest
+    restart: unless-stopped
+    networks:
+      - pz-network
+    env_file:
+      - .env
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+      - "27015:27015/tcp"
+    volumes:
+      - ./data:/home/steam/Zomboid
+      - ./custom-mods:/home/steam/Zomboid/mods
+
+networks:
+  pz-network:
+    driver: bridge
